@@ -1,0 +1,44 @@
+<section class="container-sm mt-5">
+  <div class="col">
+    <div class="card card-body text-center">
+      <h1 class="text-center"> Login </h1>
+
+      {{ messages }}
+
+
+
+            <form method="post" action="/user/login">
+
+              <div class="form-group ">
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Email" value="{{#if email}}{{email}}{{/if}}" />
+              </div>
+              <br>
+
+              <div class="form-group ">
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" value="password"
+                  value="{{#if password}}{{password}}{{/if}}" />
+              </div>
+              <br>
+
+              <br>
+              <button class="btn btn-primary" id="login" type="submit" value="submit">Login
+              </button>
+
+            </form>
+
+            <div
+              style="display: flex; flex-direction: row; justify-content: space-between; align-content: space-between; margin-top: 2em;">
+
+              <a href="/forgot-password"><button class="mr-5"
+                  style="background:none; border: none;  padding: 0;color: #006747; cursor: pointer; display: flex; margin: 0 auto;">Forgot
+                  your password?</button></a>
+
+              <a href="/register"> <button id="register"
+                  style="background:none; border: none;  padding: 0;color:blue; cursor: pointer;display: flex; margin: 0 auto;">Register</button></a>
+
+            </div>
+    </div>
+
+</section>
